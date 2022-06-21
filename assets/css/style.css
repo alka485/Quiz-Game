@@ -24,3 +24,9 @@ body{
     padding: 25px;
     display: block;
 }
+.quiz_box{
+    width: 550px;
+    background: #fff;
+    border-radius: 5px;
+    opacity: none;
+}
