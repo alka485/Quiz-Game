@@ -30,3 +30,21 @@ body{
     border-radius: 5px;
     opacity: none;
 }
+.quiz_box header .time_left_txt{
+    font-weight: 400px;
+    font-size: 17px;
+}
+.quiz_box header .timer_sec{
+    font-size: 18px;
+    font-weight: 500;
+    height: 30px;
+    width: 45px;
+    color: #fff;
+    border-radius: 5px;
+    line-height: 30px;
+    text-align: center;
+    background: #343a40;
+    border: 1px solid #343a40;
+    
+}
+
