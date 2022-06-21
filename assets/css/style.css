@@ -19,3 +19,8 @@ body{
     font-size: 16px;
     color: #007bff;
 }
+.HighScores{
+    color: #fff;
+    padding: 25px;
+    display: block;
+}
