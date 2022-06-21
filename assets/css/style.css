@@ -47,4 +47,37 @@ body{
     border: 1px solid #343a40;
     
 }
+section.que_text{
+    font-size: 25px;
+    font-weight: 600;
+}
+section .option_list{
+    padding: 20px 0px;
+    display: block;
+}
+
+footer{
+    height: 60px;
+    padding: 0 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid lightgrey;
+}
+
+.next_btn{
+    height: 40px;
+    padding: 0 13px;
+    font-size: 18px;
+    font-weight: 400;
+    border: none;
+    outline: none;
+    color: #fff;
+    border-radius: 5px;
+    background: #007bff;
+    border: 1px solid #007bff;
+    line-height: 10px;
+    
+    
+}
 
