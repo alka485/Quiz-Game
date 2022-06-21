@@ -62,6 +62,17 @@ var question =[
     
 ];
 //timer//
+var secondsLeft=15;
+startbuttonEl.addEventListener("click",function(){
+    console.log("timer");
+    var timerInterval = setInterval(function(){
+        secondsLeft--;
+        timerLineEl.textContent=secondsLeft;
+        if(secondsLeft==0){
+            clearInterval(timerInterval);
+        }
+    },1000);
+});
 // var currentQuestion = questions[QuestionPosition];
 
 //declare the 'timerEL'
