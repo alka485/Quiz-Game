@@ -1,5 +1,7 @@
 //declare 'countdown' number
 //declare 'question'
+var startbuttonEl = document.querySelector(".start_button");
+var timerLineEl = document.querySelector("#timer_sec");
 console.log("check");
 var question =[
     {
@@ -59,3 +61,12 @@ var question =[
       }
     
 ];
+//timer//
+// var currentQuestion = questions[QuestionPosition];
+
+//declare the 'timerEL'
+//var timerEL = document.querySelector('#timer');
+
+//function startGame(){
+  // currentQuestion=0;
+   //questionTextEl.innerHTML=question[currentQuestion].question;
