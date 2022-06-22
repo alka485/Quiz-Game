@@ -65,7 +65,7 @@ var question =[
 var secondsLeft=15;
 startbuttonEl.addEventListener("click",function(){
     console.log("timer");
-    location.href = "question.html";
+    //location.href = "question.html";
     var timerInterval = setInterval(function(){
         secondsLeft--;
         timerLineEl.textContent=secondsLeft;
@@ -73,6 +73,7 @@ startbuttonEl.addEventListener("click",function(){
             clearInterval(timerInterval);
         }
     },1000);
+    
 });
 // var currentQuestion = questions[QuestionPosition];
 
