@@ -2,8 +2,9 @@
 //declare 'question'
 var startbuttonEl = document.querySelector(".start_button");
 var timerLineEl = document.querySelector("#timer_sec");
+var question = document.getElementById("Question_Text");
 console.log("check");
-var question =[
+var questions =[
     {
         id: 1,
         question: "What does HTML stand for?",
@@ -65,7 +66,7 @@ var question =[
 var secondsLeft=15;
 startbuttonEl.addEventListener("click",function(){
     console.log("timer");
-    //location.href = "question.html";
+    
     var timerInterval = setInterval(function(){
         secondsLeft--;
         timerLineEl.textContent=secondsLeft;
@@ -76,6 +77,10 @@ startbuttonEl.addEventListener("click",function(){
     
 });
 // var currentQuestion = questions[QuestionPosition];
+function startGame(id) {
+  question.innerText=questions[id].q;
+}
+
 
 //declare the 'timerEL'
 //var timerEL = document.querySelector('#timer');
