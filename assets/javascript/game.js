@@ -65,6 +65,7 @@ var question =[
 var secondsLeft=15;
 startbuttonEl.addEventListener("click",function(){
     console.log("timer");
+    location.href = "question.html";
     var timerInterval = setInterval(function(){
         secondsLeft--;
         timerLineEl.textContent=secondsLeft;
@@ -81,3 +82,55 @@ startbuttonEl.addEventListener("click",function(){
 //function startGame(){
   // currentQuestion=0;
    //questionTextEl.innerHTML=question[currentQuestion].question;
+
+// var currentQuestion = questions[QuestionPosition];
+
+//declare the 'timerEL'
+//var timerEL = document.querySelector('#timer');
+
+//function startGame(){
+  // currentQuestion=0;
+   //questionTextEl.innerHTML=question[currentQuestion].question;
+
+  
+
+
+//}
+
+ // startGame();  
+
+
+//function 'start game'
+    //hide the start screen
+    //set question position to 0
+    //display the current  question
+    //display the currentquestion();
+    //set the starting value of 'countdown'
+    //start timer 'start Timer'
+    //if 'countdown===0 then 'endGame()'
+
+//function 'endGame'
+    //Hide the question area
+    //Show the record high score
+    //Clear the timer interval
+
+// Function 'answerquestion'
+    //Check if the selected answer is correct
+      //if the answer is wrong
+        // then we need to subtract from 'countdown'
+     //INCREASING the question position by 1 
+     //if I've passed the Last question
+      // Then 'endGame()'
+
+    //Else
+
+       //Display the current  question
+       //displayCurrentQuestion();
+    
+//Function 'displayCurrentQuestion'
+function displayCurrentQuestion(){
+
+}
+
+//Function 'recordTheHighScore'
+    
