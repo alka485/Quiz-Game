@@ -77,9 +77,9 @@ startbuttonEl.addEventListener("click",function(){
     
 });
 // var currentQuestion = questions[QuestionPosition];
-function startGame(id) {
-  question.innerText=questions[id].q;
-}
+
+var currentQuestion = 0;
+console.log(currentQuestion);
 
 
 //declare the 'timerEL'
@@ -88,19 +88,6 @@ function startGame(id) {
 //function startGame(){
   // currentQuestion=0;
    //questionTextEl.innerHTML=question[currentQuestion].question;
-
-// var currentQuestion = questions[QuestionPosition];
-
-//declare the 'timerEL'
-//var timerEL = document.querySelector('#timer');
-
-//function startGame(){
-  // currentQuestion=0;
-   //questionTextEl.innerHTML=question[currentQuestion].question;
-
-  
-
-
 //}
 
  // startGame();  
