@@ -6,7 +6,10 @@
 }
 body{
     background-color: #007bff;
-    display: flexbox;
+    display: flex;
+    justify-content: center;
+    
+    
 }
 .start_div{
     display: flex;
@@ -22,13 +25,17 @@ body{
 .HighScores{
     color: #fff;
     padding: 25px;
-    display: block;
+
+    
 }
 .quiz_box{
-    width: 550px;
+    width: 800px;
+    max-width: 80%;
     background: #fff;
     border-radius: 5px;
-    opacity: none;
+    padding: 10px;
+    box-shadow: 0 0 10px 2px;
+    
 }
 .quiz_box header .time_left_txt{
     font-weight: 400px;
