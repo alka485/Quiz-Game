@@ -15,7 +15,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 500px;
+    
 }
 .start_button{
     padding: 15px 32px;
@@ -97,5 +97,14 @@ footer{
 }
 
 .hide{
-    display:none;
+    display:;
+}
+
+.container{
+    width: 800px;
+    max-width: 80%;
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0 0 10px 2px;
 }

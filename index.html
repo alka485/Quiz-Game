@@ -9,21 +9,20 @@
 </head>
 <body>
     <a href ="#" class = "HighScores">VIEW HIGHSCORES</a>
-    <div class ="start_div">
+    <!--<div class ="start_div">
         <button class="start_button" id="start-page">Start Quiz</button>
 
-    </div>
+    </div>-->
     <!--Quiz Box-->
     <div class="quiz_box hide" >
         <header>
-            <div class="title">Quiz Game</div>
-            <div class="timer">
+              <div class="timer">
                 <div class="time_left_txt">Time Left</div>
                 <div class="timer_sec" id="timer_sec"></div>
             </div>
             <div class="time_line" id="time_line" style="width:550px;"></div>
         </header>
-        <section>
+        
             <div class="container">
             <div id="question-container" class="hide">
                 <div id="question">question</div>
@@ -35,14 +34,12 @@
                 </div>
             </div>
             <div class ="start_div">
-                <button class="start_button" id="start-page">Start Quiz</button>
+                <button class="start_btn btn" id="start-btn">Start Quiz</button>
+                <button class="next_btn btn hide" id="next-btn">Next</button>
             
             </div>
-        </section>
-        <footer>
-           
-            <button class="next_btn">Next_Question</button>
-        </footer>
+        
+        
     </div>
     <script src="./assets/javascript/game.js">
 
