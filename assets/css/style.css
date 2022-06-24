@@ -71,14 +71,7 @@ section .option_list{
     gap: 10px;
 }
 
-footer{
-    height: 60px;
-    padding: 0 30px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    border-top: 1px solid lightgrey;
-}
+
 
 .next_btn{
     height: 40px;
@@ -91,13 +84,25 @@ footer{
     border-radius: 5px;
     background: #007bff;
     border: 1px solid #007bff;
+    line-height: 10px;   
+}
+
+.start_btn{
+    height: 40px;
+    padding: 0 13px;
+    font-size: 18px;
+    font-weight: 400;
+    border-radius: 5px;
+    outline: none;
+    color: #fff;
+    border-radius: 5px;
+    background: #007bff;
+    border: 1px solid #007bff;
     line-height: 10px;
-    
-    
 }
 
 .hide{
-    display:;
+    display: none;
 }
 
 .container{
