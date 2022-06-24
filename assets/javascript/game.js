@@ -21,7 +21,7 @@ var questions = [
 var secondsLeft=15;
 startbuttonEl.addEventListener("click",startGame)
 // var currentQuestion = questions[QuestionPosition]
-var currentQuestionIndex
+//var currentQuestionIndex = questions[questionsPosition]
 function startGame(){
  // console.log('started start game')
   //console.log("timer");
