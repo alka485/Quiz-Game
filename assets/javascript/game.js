@@ -2,7 +2,8 @@
 //declare 'question'
 var startbuttonEl = document.querySelector(".start_button");
 var timerLineEl = document.querySelector("#timer_sec");
-var question = document.getElementById("Question_Text");
+var questionContainerElement = document.getElementById('question-container')
+console.log(questionContainerElement)
 console.log("check");
 var questions =[
     {
@@ -64,8 +65,12 @@ var questions =[
 ];
 //timer//
 var secondsLeft=15;
-startbuttonEl.addEventListener("click",function(){
-    console.log("timer");
+startbuttonEl.addEventListener("click",startGame)
+// var currentQuestion = questions[QuestionPosition]
+var currentQuestionIndex
+function startGame(){
+  console.log('started')
+  console.log("timer");
     
     var timerInterval = setInterval(function(){
         secondsLeft--;
@@ -74,9 +79,18 @@ startbuttonEl.addEventListener("click",function(){
             clearInterval(timerInterval);
         }
     },1000);
-    
-});
-// var currentQuestion = questions[QuestionPosition];
+  startbuttonEl.classList.add('hide')
+  currentQuestionIndex=0;
+  //questionContainerElement.classList.remove('hide')
+  questionContainerElement.classList.remove('hide')
+ // setNextQuestion()
+
+}
+
+function setNextQuestion(){
+  resetState()
+  showQuestion([currentQuestionIndex])
+}
 
 var currentQuestion = 0;
 console.log(currentQuestion);
