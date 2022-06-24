@@ -1,6 +1,6 @@
 //declare 'countdown' number
 //declare 'question'
-var startbuttonEl = document.querySelector(".start_button");
+var startbuttonEl = document.getElementById('start-btn')
 var timerLineEl = document.querySelector("#timer_sec");
 var questionContainerElement = document.getElementById('question-container')
 console.log(questionContainerElement)
