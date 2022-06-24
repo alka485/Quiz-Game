@@ -3,27 +3,28 @@
 var startbuttonEl = document.getElementById('start-btn')
 var timerLineEl = document.querySelector("#timer_sec");
 var questionContainerElement = document.getElementById('question-container')
+var questionEl = document.getElementById('question')
+var answerEl = document.getElementById('answers-button')
 console.log(questionContainerElement)
 console.log("check");
-var shuffledQuestions 
-var questions =[
-    {
-        question: "What does HTML stand for?",
-        answer:[
-          {Text :  "Hyper Text Preprocessor",correct :false},
-          {Text : "Hyper Text Multiple Language",correct :true}
-        ]
-      }
-    
-];
+var shuffledQuestions , currentQuestion
+var questions = [
+  {
+    question : 'what does HTML stand for',
+    answers : [
+      { text : 'Hyper Text Preprocessor' , correct : false},
+      { text : 'Hyper Text Multiple Language', correct : true}
+    ]  
+  }
+]
 //timer//
 var secondsLeft=15;
 startbuttonEl.addEventListener("click",startGame)
 // var currentQuestion = questions[QuestionPosition]
 var currentQuestionIndex
 function startGame(){
-  console.log('started start game')
-  console.log("timer");
+ // console.log('started start game')
+  //console.log("timer");
     
     var timerInterval = setInterval(function(){
         secondsLeft--;
@@ -33,22 +34,24 @@ function startGame(){
         }
     },1000);
   startbuttonEl.classList.add('hide')
-  shuffledQuestions=questions.sort(()=>Math.random()- .5)
-  currentQuestionIndex=0;
   
-  //questionContainerElement.classList.remove('hide')
+  currentQuestionIndex=0;  
   questionContainerElement.classList.remove('hide')
- // setNextQuestion()
-
+  
+ setNextQuestion()
 }
 
 function setNextQuestion(){
-  resetState()
-  showQuestion([currentQuestionIndex])
+  
+  showQuestion(currentQuestionIndex)
+  console.log(setNextQuestion)
+  console.log(currentQuestionIndex)
 }
 
-var currentQuestion = 0;
-console.log(currentQuestion);
+function showQuestion(question){
+  questionEl.innerText=question.question
+}
+
 
 
 //declare the 'timerEL'
