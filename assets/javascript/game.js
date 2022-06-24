@@ -5,60 +5,13 @@ var timerLineEl = document.querySelector("#timer_sec");
 var questionContainerElement = document.getElementById('question-container')
 console.log(questionContainerElement)
 console.log("check");
+var shuffledQuestions 
 var questions =[
     {
-        id: 1,
         question: "What does HTML stand for?",
-        answer: "Hyper Text Markup Language",
-        options: [
-          "Hyper Text Preprocessor",
-          "Hyper Text Markup Language",
-          "Hyper Text Multiple Language",
-          "Hyper Tool Multi Language"
-        ]
-      },
-        {
-        id: 2,
-        question: "What does CSS stand for?",
-        answer: "Cascading Style Sheet",
-        options: [
-          "Common Style Sheet",
-          "Colorful Style Sheet",
-          "Computer Style Sheet",
-          "Cascading Style Sheet"
-        ]
-      },
-        {
-        id: 3,
-        question: "What does PHP stand for?",
-        answer: "Hypertext Preprocessor",
-        options: [
-          "Hypertext Preprocessor",
-          "Hypertext Programming",
-          "Hypertext Preprogramming",
-          "Hometext Preprocessor"
-        ]
-      },
-        {
-        id: 4,
-        question: "What does SQL stand for?",
-        answer: "Structured Query Language",
-        options: [
-          "Stylish Question Language",
-          "Stylesheet Query Language",
-          "Statement Question Language",
-          "Structured Query Language"
-        ]
-      },
-        {
-        id: 5,
-        question: "What does XML stand for?",
-        answer: "eXtensible Markup Language",
-        options: [
-          "eXtensible Markup Language",
-          "eXecutable Multiple Language",
-          "eXTra Multi-Program Language",
-          "eXamine Multiple Language"
+        answer:[
+          {Text :  "Hyper Text Preprocessor",correct :false},
+          {Text : "Hyper Text Multiple Language",correct :true}
         ]
       }
     
@@ -69,7 +22,7 @@ startbuttonEl.addEventListener("click",startGame)
 // var currentQuestion = questions[QuestionPosition]
 var currentQuestionIndex
 function startGame(){
-  console.log('started')
+  console.log('started start game')
   console.log("timer");
     
     var timerInterval = setInterval(function(){
@@ -80,7 +33,9 @@ function startGame(){
         }
     },1000);
   startbuttonEl.classList.add('hide')
+  shuffledQuestions=questions.sort(()=>Math.random()- .5)
   currentQuestionIndex=0;
+  
   //questionContainerElement.classList.remove('hide')
   questionContainerElement.classList.remove('hide')
  // setNextQuestion()
