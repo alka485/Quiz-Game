@@ -49,8 +49,22 @@ function setNextQuestion(){
 }
 
 function showQuestion(question){
-  questionEl.innerText=question.question
-}
+  questionEl.innerText=questions[question].question
+ for (i=0;i<questions.length;i++)
+ {
+  answers =[]
+    button = document.createElement('button'),
+     button.innerText=answers.text,
+     button.classList.add('btn')
+    
+  }
+ }
+
+
+  
+
+  
+
 
 
 
