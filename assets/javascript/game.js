@@ -58,44 +58,37 @@ var questions = [
   }
 ]
 //timer//
-var secondsLeft=15;
+var secondsLeft=80;
 startbuttonEl.addEventListener("click",startGame)
 // var currentQuestion = questions[QuestionPosition]
 //var currentQuestionIndex = questions[questionsPosition]
 function startGame(){
- // console.log('started start game')
-  //console.log("timer");
-    
-    var timerInterval = setInterval(function(){
-        secondsLeft--;
+        var timerInterval = setInterval(function(){
+         secondsLeft--;
         timerLineEl.textContent=secondsLeft;
         if(secondsLeft==0){
             clearInterval(timerInterval);
         }
     },1000);
   startbuttonEl.classList.add('hide')
-  
-  
-  questionContainerElement.classList.remove('hide')
-  
+  questionContainerElement.classList.remove('hide') 
  setNextQuestion()
 }
 
 function setNextQuestion(){
-  
   showQuestion(currentQuestionIndex)
-  console.log(setNextQuestion)
-  console.log(currentQuestionIndex)
+  console.log("Next Question")
 }
 
 function showQuestion(currentQuestionIndex){
   questionEl.innerText=questions[currentQuestionIndex].question
-
- for (i=0; i<5 ;i++)
- { 
+    console.log(questions[currentQuestionIndex].question)
+    for (i=0; i<4 ;i++)
+    { 
      console.log("#btn"+(i+1))
      console.log(currentQuestionIndex);
      document.querySelector("#btn"+(i+1)).innerText=questions[currentQuestionIndex].answers[i].text;
+     console.log(questions[currentQuestionIndex].answers[i].text)
     if (questions[currentQuestionIndex].answers[i].correct){
        correctAnswerIndex =i
       }  
