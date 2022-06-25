@@ -1,5 +1,34 @@
 //declare 'countdown' number
 //declare 'question'
+var correctAnswerIndex;
+var button1 = document.getElementById('btn1')
+var button2 = document.getElementById('btn2')
+var button3 = document.getElementById('btn3')
+var button4 = document.getElementById('btn4')
+button1.addEventListener("click",(event)=>{
+  if (correctAnswerIndex==0)
+      alert('correct')
+  else
+    alert('false') 
+})
+button2.addEventListener("click",(event)=>{
+  if (correctAnswerIndex==1)
+      alert('correct')
+  else
+    alert('false') 
+})
+button3.addEventListener("click",(event)=>{
+  if (correctAnswerIndex==2)
+      alert('correct')
+  else
+    alert('false') 
+})
+button4.addEventListener("click",(event)=>{
+  if (correctAnswerIndex==4)
+      alert('correct')
+  else
+    alert('false') 
+})
 var startbuttonEl = document.getElementById('start-btn')
 var timerLineEl = document.querySelector("#timer_sec");
 var questionContainerElement = document.getElementById('question-container')
@@ -8,13 +37,15 @@ var answerEl = document.getElementById('answers-button')
 var button = document.getElementById('btn')
 console.log(questionContainerElement)
 console.log("check");
-var shuffledQuestions , currentQuestion
+var currentQuestionIndex=0;
 var questions = [
   {
     question : 'what does HTML stand for',
     answers : [
       { text : 'Hyper Text Preprocessor' , correct : false},
-      { text : 'Hyper Text Multiple Language', correct : true}
+      { text : 'Hyper Text Multiple Language', correct : true},
+      {text: "askjfdk",correct : false},
+      {text: "hfjkg",correct : false}
     ]  
   }
 ]
@@ -36,7 +67,7 @@ function startGame(){
     },1000);
   startbuttonEl.classList.add('hide')
   
-  currentQuestionIndex=0;  
+  
   questionContainerElement.classList.remove('hide')
   
  setNextQuestion()
@@ -49,14 +80,22 @@ function setNextQuestion(){
   console.log(currentQuestionIndex)
 }
 
-function showQuestion(question){
-  questionEl.innerText=questions[question].question
- for (i=0;i<questions.length;i++)
- {
+function showQuestion(currentQuestionIndex){
+  questionEl.innerText=questions[currentQuestionIndex].question
+
+ for (i=0; i<5 ;i++)
+
+ { 
+     console.log("#btn"+(i+1))
+     document.querySelector("#btn"+(i+1)).innerText=questions[currentQuestionIndex].answers[i].text
+
+    if (questions[currentQuestionIndex].answers[i].correct){
+       correctAnswerIndex =i
+       
+    }
      
-     button.innerText= answers[i].text
-     button.classList.add('btn')
-     console.log(button)
+     
+     console.log('button')
     
   }
  }
