@@ -5,6 +5,7 @@ var timerLineEl = document.querySelector("#timer_sec");
 var questionContainerElement = document.getElementById('question-container')
 var questionEl = document.getElementById('question')
 var answerEl = document.getElementById('answers-button')
+var button = document.getElementById('btn')
 console.log(questionContainerElement)
 console.log("check");
 var shuffledQuestions , currentQuestion
@@ -52,10 +53,10 @@ function showQuestion(question){
   questionEl.innerText=questions[question].question
  for (i=0;i<questions.length;i++)
  {
-  answers =[]
-    button = document.createElement('button'),
-     button.innerText=answers.text,
+     
+     button.innerText= answers[i].text
      button.classList.add('btn')
+     console.log(button)
     
   }
  }
