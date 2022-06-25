@@ -45,14 +45,21 @@ var questions = [
       {text  : 'Hyper Text Markup Language',  correct : true},
       {text  : 'Hyper Text Multi Language',   correct : false}
     ],
-
     question : 'what does CSS stand for',
     answers  : [
       { text : 'Common Style Sheet' ,    correct : false},
       { text : 'Colorful Style Sheet',correct : false},
       {text  : 'Computer Style Sheet',  correct : false},
       {text  : 'Cascading Style Sheet',   correct : true}
-    ]  
+    ], 
+    question : 'What does PHP stand for',
+    answers  : [
+      { text : 'Hypertext Preprocessor' ,    correct : true},
+      { text : 'Hypertext Programming'  ,    correct : false},
+      {text  : 'Hypertext Preprogramming',   correct : false},
+      {text  : 'Hometext Preprocessor',      correct : false }
+    ] 
+
     
     
   }
@@ -89,7 +96,7 @@ function showQuestion(currentQuestionIndex){
      console.log(currentQuestionIndex);
      document.querySelector("#btn"+(i+1)).innerText=questions[currentQuestionIndex].answers[i].text;
      console.log(questions[currentQuestionIndex].answers[i].text)
-    if (questions[currentQuestionIndex].answers[i].correct){
+     if (questions[currentQuestionIndex].answers[i].correct){
        correctAnswerIndex =i
       }  
        
