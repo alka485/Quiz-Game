@@ -1,5 +1,3 @@
-//declare 'countdown' number
-//declare 'question'
 var correctAnswerIndex;
 var button1 = document.getElementById('btn1')
 var button2 = document.getElementById('btn2')
@@ -41,12 +39,22 @@ var currentQuestionIndex=0;
 var questions = [
   {
     question : 'what does HTML stand for',
-    answers : [
-      { text : 'Hyper Text Preprocessor' , correct : false},
-      { text : 'Hyper Text Multiple Language', correct : true},
-      {text: "askjfdk",correct : false},
-      {text: "hfjkg",correct : false}
+    answers  : [
+      { text : 'Hyper Text Preprocessor' ,    correct : false},
+      { text : 'Hyper Text Multiple Language',correct : false},
+      {text  : 'Hyper Text Markup Language',  correct : true},
+      {text  : 'Hyper Text Multi Language',   correct : false}
+    ],
+
+    question : 'what does CSS stand for',
+    answers  : [
+      { text : 'Common Style Sheet' ,    correct : false},
+      { text : 'Colorful Style Sheet',correct : false},
+      {text  : 'Computer Style Sheet',  correct : false},
+      {text  : 'Cascading Style Sheet',   correct : true}
     ]  
+    
+    
   }
 ]
 //timer//
@@ -84,19 +92,14 @@ function showQuestion(currentQuestionIndex){
   questionEl.innerText=questions[currentQuestionIndex].question
 
  for (i=0; i<5 ;i++)
-
  { 
      console.log("#btn"+(i+1))
-     document.querySelector("#btn"+(i+1)).innerText=questions[currentQuestionIndex].answers[i].text
-
+     console.log(currentQuestionIndex);
+     document.querySelector("#btn"+(i+1)).innerText=questions[currentQuestionIndex].answers[i].text;
     if (questions[currentQuestionIndex].answers[i].correct){
        correctAnswerIndex =i
+      }  
        
-    }
-     
-     
-     console.log('button')
-    
   }
  }
 

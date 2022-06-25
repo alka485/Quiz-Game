@@ -69,6 +69,11 @@ section .option_list{
     display: grid;
     margin: 20px;
     gap: 10px;
+    
+}
+
+.btn{
+    background-color: #007bff;
 }
 
 
