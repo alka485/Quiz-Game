@@ -27,12 +27,13 @@ button4.addEventListener("click",(event)=>{
   else
     alert('false') 
 })
-var startbuttonEl = document.getElementById('start-btn')
+var startbuttonEl = document.getElementById('start-btn');
 var timerLineEl = document.querySelector("#timer_sec");
 var questionContainerElement = document.getElementById('question-container')
-var questionEl = document.getElementById('question')
-var answerEl = document.getElementById('answers-button')
-var button = document.getElementById('btn')
+var questionEl = document.getElementById('question');
+var answerEl = document.getElementById('answers-button');
+var button = document.getElementById('btn');
+var correctAnswerEl = document.getElementById("correct-answer");
 console.log(questionContainerElement)
 console.log("check");
 var currentQuestionIndex=0;
@@ -102,8 +103,20 @@ function showQuestion(currentQuestionIndex){
        correctAnswerIndex =i
       }      
   }
- }
+}
 
+// Function 'answerquestion'
+    //Check if the selected answer is correct
+      //if the answer is wrong
+        // then we need to subtract from 'countdown'
+     //INCREASING the question position by 1 
+     //if I've passed the Last question
+      // Then 'endGame()'
+
+    //Else
+
+       //Display the current  question
+       //displayCurrentQuestion();
 
   
 
