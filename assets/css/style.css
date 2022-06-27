@@ -8,8 +8,7 @@ body{
     background-color: #007bff;
     display: flex;
     justify-content: center;
-    
-    
+   
 }
 .start_div{
     display: flex;
@@ -38,8 +37,7 @@ body{
     background: #fff;
     border-radius: 5px;
     padding: 10px;
-    box-shadow: 0 0 10px 2px;
-    
+    box-shadow: 0 0 10px 2px;    
 }
 .quiz_box header .time_left_txt{
     font-weight: 400px;
