@@ -25,11 +25,13 @@ body{
 }
 .HighScores{
     color: #fff;
-    padding: 25px;
-    
-
-    
+    padding: 25px;    
 }
+.timer{
+    color: #fff;
+    padding: 25px;    
+}
+
 .quiz_box{
     width: 800px;
     max-width: 80%;

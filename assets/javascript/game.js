@@ -58,17 +58,19 @@ var questions = [
       { text : 'Hypertext Programming'  ,    correct : false},
       {text  : 'Hypertext Preprogramming',   correct : false},
       {text  : 'Hometext Preprocessor',      correct : false }
-    ] 
-
-    
-    
+    ], 
+    question : 'What does XML stand for?',
+    answers  : [
+      { text : 'eXtensible Markup Language' ,    correct : true},
+      { text : 'eXecutable Multiple Language'  , correct : false},
+      {text  : 'eXTra Multi-Program Language',   correct : false},
+      {text  : 'eXamine Multiple Language'   ,   correct : false }
+    ]   
   }
 ]
 //timer//
 var secondsLeft=80;
 startbuttonEl.addEventListener("click",startGame)
-// var currentQuestion = questions[QuestionPosition]
-//var currentQuestionIndex = questions[questionsPosition]
 function startGame(){
         var timerInterval = setInterval(function(){
          secondsLeft--;
@@ -98,8 +100,7 @@ function showQuestion(currentQuestionIndex){
      console.log(questions[currentQuestionIndex].answers[i].text)
      if (questions[currentQuestionIndex].answers[i].correct){
        correctAnswerIndex =i
-      }  
-       
+      }      
   }
  }
 
