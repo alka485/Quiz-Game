@@ -8,6 +8,7 @@ body{
     background-color: #007bff;
     display: flex;
     justify-content: center;
+    align-items: center;
    
 }
 .start_div{
@@ -117,4 +118,7 @@ section .option_list{
     border-radius: 5px;
     padding: 10px;
     box-shadow: 0 0 10px 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
