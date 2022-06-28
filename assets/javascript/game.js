@@ -101,6 +101,7 @@ function showQuestion(currentQuestionIndex){
      console.log(questions[currentQuestionIndex].answers[i].text)
      if (questions[currentQuestionIndex].answers[i].correct){
        correctAnswerIndex =i
+       answerQuestion();
       }      
   }
 }
@@ -118,6 +119,35 @@ function showQuestion(currentQuestionIndex){
        //Display the current  question
        //displayCurrentQuestion();
 
+       function answerQuestion() {
+        var tagName = document.createElement("h3");
+        button1.addEventListener("click",(event)=>{
+          if (correctAnswerIndex==0)
+              tagName.textContent('correct');
+          else
+            alert('false') 
+        })
+        button2.addEventListener("click",(event)=>{
+          if (correctAnswerIndex==1)
+              alert('correct')
+          else
+            alert('false') 
+        })
+        button3.addEventListener("click",(event)=>{
+          if (correctAnswerIndex==2)
+              alert('correct')
+          else
+            alert('false') 
+        })
+        button4.addEventListener("click",(event)=>{
+          if (correctAnswerIndex==4)
+              alert('correct')
+          else
+            alert('false') 
+        })
+
+        
+       }
   
 
   
