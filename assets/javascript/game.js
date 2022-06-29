@@ -1,4 +1,5 @@
 var correctAnswerIndex;
+var score = 0;
 var button1 = document.getElementById('btn-1');
 var button2 = document.getElementById('btn-2');
 var button3 = document.getElementById('btn-3');
@@ -11,6 +12,7 @@ var questionEl = document.getElementById('question');
 var answerEl = document.getElementById('answers-button');
 var button = document.getElementById('btn');
 var correctAnswerEl = document.getElementById("correct-answer");
+var finalScorEl = document.getElementById("final-score");
 var currentQuestionIndex = 0;
 var questions = [
   {
@@ -88,23 +90,7 @@ function showQuestion(currentQuestionIndex) {
     for (i = 0; i < 4; i++) {
     document.querySelector("#btn-" + (i + 1)).innerText = questions[currentQuestionIndex].answers[i].text;    
   }
-}
-
-// Function 'answerquestion'
-//Check if the selected answer is correct
-//if the answer is wrong
-// then we need to subtract from 'countdown'
-//INCREASING the question position by 1 
-//if I've passed the Last question
-// Then 'endGame()'
-
-//Else
-
-//Display the current  question
-//displayCurrentQuestion();
-
-  
- 
+} 
 button1.addEventListener("click",checkAnswer)
 button2.addEventListener("click",checkAnswer)
 button3.addEventListener("click",checkAnswer)
@@ -112,7 +98,9 @@ button4.addEventListener("click",checkAnswer)
 function checkAnswer(event){
   //console.log(event.target.id.split('-')[1]);
   if(event.target.id.split('-')[1]==questions[currentQuestionIndex].correctAnswer){
-    correctAnswerEl.textContent = "correct";  
+    correctAnswerEl.textContent = "correct"; 
+    score += 5;
+    console.log(score); 
   }
   else{
     correctAnswerEl.textContent = "wrong";
@@ -124,10 +112,10 @@ function checkAnswer(event){
 
 function endGame(){
   console.log("game ended");
-  //startbuttonEl.classList.add('hide')
-  //questionContainerElement.classList.remove('hide')
+  console.log(score);
   questionContainerElement.classList.add('hide');
   scorePanelEl.classList.remove('hide');
+  finalScorEl.textContent = score;
 }
 
 
