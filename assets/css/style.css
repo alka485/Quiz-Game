@@ -29,7 +29,8 @@ body{
 }
 .timer{
     color: #fff;
-    padding: 25px;    
+    padding: 25px; 
+    justify-content:right;   
 }
 
 section.que_text{
