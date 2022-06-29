@@ -14,7 +14,8 @@ var button = document.getElementById('btn');
 var correctAnswerEl = document.getElementById("correct-answer");
 var finalScorEl = document.getElementById("final-score");
 var highScoreEl = document.getElementById("High-Score");
-var submitbuttonEl = document.getElementById("submit")
+var submitbuttonEl = document.getElementById("submit");
+var value = document.querySelector("#value");
 var currentQuestionIndex = 0;
 var questions = [
   {
@@ -116,8 +117,10 @@ function endGame(){
   questionContainerElement.classList.add('hide');
   scorePanelEl.classList.remove('hide');
   finalScorEl.textContent = score; 
+  console.log(finalScorEl);
 }
-
+console.log(finalScorEl);
+console.log(score);
 //var finalScore = localStorage.getItem("finalScore");
 //finalScore.textContent = score;
 //console.log(finalScore);
@@ -126,6 +129,10 @@ submitbuttonEl.addEventListener("click" , highScore)
 function highScore(){
   scorePanelEl.classList.add('hide');
   highScoreEl.classList.remove('hide');
+  console.log(finalScorEl.value);
+  var valueEl = localStorage.getItem();
+  valueEl.textContent = finalScorEl;
+  console.log(valueEl);
   
 }
 
