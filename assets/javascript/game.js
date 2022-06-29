@@ -11,8 +11,7 @@ var questionEl = document.getElementById('question');
 var answerEl = document.getElementById('answers-button');
 var button = document.getElementById('btn');
 var correctAnswerEl = document.getElementById("correct-answer");
-console.log(questionContainerElement)
-console.log("check");
+
 var currentQuestionIndex = 0;
 var questions = [
   {
@@ -81,24 +80,13 @@ function setNextQuestion() {
   else{
     endGame();
   }
-  //showQuestion(currentQuestionIndex);
-  console.log("Next Question")
-
+    
 }
 
 function showQuestion(currentQuestionIndex) {
-
- 
-    questionEl.innerText = questions[currentQuestionIndex].question
-    //currentQuestionIndex[i++];
-    
+     questionEl.innerText = questions[currentQuestionIndex].question
     for (i = 0; i < 4; i++) {
-    document.querySelector("#btn-" + (i + 1)).innerText = questions[currentQuestionIndex].answers[i].text;
-    
-    //currentQuestionIndex++;
-    //currentQuestionIndex[i];
-    
-    //currentQuestionIndex[i++];    
+    document.querySelector("#btn-" + (i + 1)).innerText = questions[currentQuestionIndex].answers[i].text;    
   }
 }
 
@@ -122,15 +110,15 @@ button2.addEventListener("click",checkAnswer)
 button3.addEventListener("click",checkAnswer)
 button4.addEventListener("click",checkAnswer)
 function checkAnswer(event){
-  console.log(event.target.id.split('-')[1]);
+  //console.log(event.target.id.split('-')[1]);
   if(event.target.id.split('-')[1]==questions[currentQuestionIndex].correctAnswer){
     console.log("correct");
-    
+    correctAnswerEl.textContent = "correct";  
   }
   else{
     console.log("incorrect");
+    correctAnswerEl.textContent = "wrong";
   }
-  
   setNextQuestion();
 
 }
