@@ -65,6 +65,7 @@ function startGame() {
     timerLineEl.textContent = secondsLeft;
     if (secondsLeft == 0) {
       clearInterval(timerInterval);
+      endGame();
     }
   }, 1000);
   startbuttonEl.classList.add('hide')
