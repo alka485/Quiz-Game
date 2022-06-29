@@ -91,14 +91,18 @@ function setNextQuestion(){
 }
 
 function showQuestion(currentQuestionIndex){
-  questionEl.innerText=questions[currentQuestionIndex].question
-    console.log(questions[currentQuestionIndex].question)
+ 
+  //questionEl.innerText=questions[currentQuestionIndex].question
+    //console.log(questions[currentQuestionIndex].question)
     for (i=0; i<4 ;i++)
     { 
+      questionEl.innerText=questions[currentQuestionIndex].question
+      console.log(questions[currentQuestionIndex].question)
      console.log("#btn"+(i+1))
      console.log(currentQuestionIndex);
      document.querySelector("#btn"+(i+1)).innerText=questions[currentQuestionIndex].answers[i].text;
      console.log(questions[currentQuestionIndex].answers[i].text)
+     currentQuestionIndex++;
      if (questions[currentQuestionIndex].answers[i].correct){
        correctAnswerIndex =i
        answerQuestion();
@@ -120,16 +124,16 @@ function showQuestion(currentQuestionIndex){
        //displayCurrentQuestion();
 
        function answerQuestion() {
-        var tagName = document.createElement("h3");
+        //var tagName = document.createElement("h3");
         button1.addEventListener("click",(event)=>{
           if (correctAnswerIndex==0)
-              tagName.textContent('correct');
+              correctAnswerEl.textContent='correct' ;
           else
-            alert('false') 
+          correctAnswerEl.textContent='false' ;
         })
         button2.addEventListener("click",(event)=>{
           if (correctAnswerIndex==1)
-              alert('correct')
+              correctAnswerEl.textContent='correct' ;
           else
             alert('false') 
         })
