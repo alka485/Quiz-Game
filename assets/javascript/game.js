@@ -13,6 +13,8 @@ var answerEl = document.getElementById('answers-button');
 var button = document.getElementById('btn');
 var correctAnswerEl = document.getElementById("correct-answer");
 var finalScorEl = document.getElementById("final-score");
+var highScoreEl = document.getElementById("High-Score");
+var submitbuttonEl = document.getElementById("submit")
 var currentQuestionIndex = 0;
 var questions = [
   {
@@ -100,7 +102,7 @@ function checkAnswer(event){
   if(event.target.id.split('-')[1]==questions[currentQuestionIndex].correctAnswer){
     correctAnswerEl.textContent = "correct"; 
     score += 5;
-    console.log(score); 
+    //console.log(score); 
   }
   else{
     correctAnswerEl.textContent = "wrong";
@@ -111,24 +113,23 @@ function checkAnswer(event){
 }
 
 function endGame(){
-  console.log("game ended");
-  console.log(score);
   questionContainerElement.classList.add('hide');
   scorePanelEl.classList.remove('hide');
-  finalScorEl.textContent = score;
+  finalScorEl.textContent = score; 
+}
+
+//var finalScore = localStorage.getItem("finalScore");
+//finalScore.textContent = score;
+//console.log(finalScore);
+
+submitbuttonEl.addEventListener("click" , highScore)
+function highScore(){
+  scorePanelEl.classList.add('hide');
+  highScoreEl.classList.remove('hide');
+  
 }
 
 
-
-//declare the 'timerEL'
-//var timerEL = document.querySelector('#timer');
-
-//function startGame(){
-// currentQuestion=0;
-//questionTextEl.innerHTML=question[currentQuestion].question;
-//}
-
-// startGame();  
 
 
 //function 'start game'
