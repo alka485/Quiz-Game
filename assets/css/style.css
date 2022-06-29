@@ -23,52 +23,26 @@ body{
     color: #007bff;
     font-weight: bold;
 }
-.HighScores{
-    color: #fff;
+.HighScores , .correct-answer{
+    color: #007bff;
     padding: 25px;    
 }
+
 .timer{
     color: #fff;
     padding: 25px; 
     justify-content:right;   
 }
 
-section.que_text{
-    font-size: 25px;
-    font-weight: 600;
-}
-section .option_list{
-    padding: 20px 0px;
-    display: block;
-}
-
 .btn-grid{
     display: grid;
     margin: 20px;
-    gap: 10px;
-    
+    gap: 10px;    
 }
 
 .btn{
     background-color: #007bff;
 }
-
-
-
-.next_btn{
-    height: 40px;
-    padding: 0 13px;
-    font-size: 18px;
-    font-weight: 400;
-    border: none;
-    outline: none;
-    color: #fff;
-    border-radius: 5px;
-    background: #007bff;
-    border: 1px solid #007bff;
-    line-height: 10px;   
-}
-
 .start_btn{
     height: 40px;
     padding: 0 13px;

@@ -112,15 +112,12 @@ button4.addEventListener("click",checkAnswer)
 function checkAnswer(event){
   //console.log(event.target.id.split('-')[1]);
   if(event.target.id.split('-')[1]==questions[currentQuestionIndex].correctAnswer){
-    console.log("correct");
     correctAnswerEl.textContent = "correct";  
   }
   else{
-    console.log("incorrect");
     correctAnswerEl.textContent = "wrong";
   }
   setNextQuestion();
-
 }
 
 function endGame(){
