@@ -1,17 +1,16 @@
 var correctAnswerIndex;
-var button1 = document.getElementById('btn-1')
-var button2 = document.getElementById('btn-2')
-var button3 = document.getElementById('btn-3')
-var button4 = document.getElementById('btn-4')
-
+var button1 = document.getElementById('btn-1');
+var button2 = document.getElementById('btn-2');
+var button3 = document.getElementById('btn-3');
+var button4 = document.getElementById('btn-4');
+var scorePanelEl = document.getElementById('score-panel');
 var startbuttonEl = document.getElementById('start-btn');
 var timerLineEl = document.querySelector("#timer_sec");
-var questionContainerElement = document.getElementById('question-container')
+var questionContainerElement = document.getElementById('question-container');
 var questionEl = document.getElementById('question');
 var answerEl = document.getElementById('answers-button');
 var button = document.getElementById('btn');
 var correctAnswerEl = document.getElementById("correct-answer");
-
 var currentQuestionIndex = 0;
 var questions = [
   {
@@ -125,6 +124,10 @@ function checkAnswer(event){
 
 function endGame(){
   console.log("game ended");
+  //startbuttonEl.classList.add('hide')
+  //questionContainerElement.classList.remove('hide')
+  questionContainerElement.classList.add('hide');
+  scorePanelEl.classList.remove('hide');
 }
 
 
