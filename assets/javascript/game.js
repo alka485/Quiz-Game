@@ -57,7 +57,7 @@ var questions = [
   }
 ]
 //timer//
-var secondsLeft = 80;
+var secondsLeft = 60;
 startbuttonEl.addEventListener("click", startGame)
 function startGame() {
   var timerInterval = setInterval(function () {
@@ -116,6 +116,8 @@ function checkAnswer(event){
   }
   else{
     correctAnswerEl.textContent = "wrong";
+    secondsLeft-=10;
+    console.log(secondsLeft);
   }
   setNextQuestion();
 }
