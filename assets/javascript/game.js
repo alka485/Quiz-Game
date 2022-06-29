@@ -102,7 +102,7 @@ function showQuestion(currentQuestionIndex){
      console.log(currentQuestionIndex);
      document.querySelector("#btn"+(i+1)).innerText=questions[currentQuestionIndex].answers[i].text;
      console.log(questions[currentQuestionIndex].answers[i].text)
-     currentQuestionIndex++;
+     //currentQuestionIndex++;
      if (questions[currentQuestionIndex].answers[i].correct){
        correctAnswerIndex =i
        answerQuestion();
@@ -127,7 +127,7 @@ function showQuestion(currentQuestionIndex){
         //var tagName = document.createElement("h3");
         button1.addEventListener("click",(event)=>{
           if (correctAnswerIndex==0)
-              correctAnswerEl.textContent='correct' ;
+              correctAnswerEl.textContent='correct';
           else
           correctAnswerEl.textContent='false' ;
         })
@@ -135,19 +135,24 @@ function showQuestion(currentQuestionIndex){
           if (correctAnswerIndex==1)
               correctAnswerEl.textContent='correct' ;
           else
-            alert('false') 
+          correctAnswerEl.textContent='false' ;
+            //alert('false') 
         })
         button3.addEventListener("click",(event)=>{
           if (correctAnswerIndex==2)
-              alert('correct')
+              //alert('correct')
+              correctAnswerEl.textContent='correct' ;
           else
-            alert('false') 
+           // alert('false')
+            correctAnswerEl.textContent='false'  
         })
         button4.addEventListener("click",(event)=>{
           if (correctAnswerIndex==4)
-              alert('correct')
+              //alert('correct')
+              correctAnswerEl.textContent='correct'
           else
-            alert('false') 
+            //alert('false') 
+            correctAnswerEl.textContent='false'  
         })
 
         
