@@ -32,6 +32,9 @@ body {
     padding: 25px;
 }
 
+
+
+
 .correct-answer {
     color: #007bff;
     padding: 25px;
@@ -54,6 +57,19 @@ body {
 }
 
 .start_btn {
+    height: 40px;
+    padding: 0 13px;
+    font-size: 18px;
+    font-weight: 400;
+    border-radius: 5px;
+    outline: none;
+    color: #fff;
+    border-radius: 5px;
+    background: #007bff;
+    border: 1px solid #007bff;
+    line-height: 10px;
+}
+.submit {
     height: 40px;
     padding: 0 13px;
     font-size: 18px;
