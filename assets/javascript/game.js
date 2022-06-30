@@ -113,10 +113,9 @@ function checkAnswer(event){
 }
 
 function endGame(){
-  timerLineEl.textContent =" ";
-  console.log(timerLineEl);
-  clearInterval(timerLineEl)
-  questionContainerElement.classList.add('hide');
+ 
+  clearInterval(timerLineEl);
+   questionContainerElement.classList.add('hide');
   scorePanelEl.classList.remove('hide');
   finalScorEl.textContent = score; 
   
