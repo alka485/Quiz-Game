@@ -108,22 +108,19 @@ function checkAnswer(event){
   else{
     correctAnswerEl.textContent = "wrong";
     secondsLeft-=10;
-    console.log(secondsLeft);
-  }
+      }
   setNextQuestion();
 }
 
 function endGame(){
+  timerLineEl.textContent =" ";
+  console.log(timerLineEl);
+  clearInterval(timerLineEl)
   questionContainerElement.classList.add('hide');
   scorePanelEl.classList.remove('hide');
   finalScorEl.textContent = score; 
   
 }
-//console.log(finalScorEl);
-//console.log(score);
-//var finalScore = localStorage.getItem("finalScore");
-//finalScore.textContent = score;
-//console.log(finalScore);
 
 submitbuttonEl.addEventListener("click" , highScore)
 function highScore(){
@@ -131,6 +128,7 @@ function highScore(){
   highScoreEl.classList.remove('hide');
   localStorage.setItem("value",finalScorEl);
   document.getElementById("value").innerHTML = localStorage.getItem("value");
+
   //console.log(finalScorEl.value);
  // var valueEl = localStorage.getItem(finalScorEl);
   //console.log(valueEl);
