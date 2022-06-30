@@ -103,8 +103,8 @@ function checkAnswer(event){
   if(event.target.id.split('-')[1]==questions[currentQuestionIndex].correctAnswer){
     correctAnswerEl.textContent = "correct"; 
     score += 5;
-    //console.log(score); 
-  }
+      }
+
   else{
     correctAnswerEl.textContent = "wrong";
     secondsLeft-=10;
@@ -117,10 +117,10 @@ function endGame(){
   questionContainerElement.classList.add('hide');
   scorePanelEl.classList.remove('hide');
   finalScorEl.textContent = score; 
-  console.log(finalScorEl);
+  
 }
-console.log(finalScorEl);
-console.log(score);
+//console.log(finalScorEl);
+//console.log(score);
 //var finalScore = localStorage.getItem("finalScore");
 //finalScore.textContent = score;
 //console.log(finalScore);
@@ -129,10 +129,13 @@ submitbuttonEl.addEventListener("click" , highScore)
 function highScore(){
   scorePanelEl.classList.add('hide');
   highScoreEl.classList.remove('hide');
-  console.log(finalScorEl.value);
-  var valueEl = localStorage.getItem();
-  valueEl.textContent = finalScorEl;
-  console.log(valueEl);
+  localStorage.setItem("value",finalScorEl);
+  document.getElementById("value").innerHTML = localStorage.getItem("value");
+  //console.log(finalScorEl.value);
+ // var valueEl = localStorage.getItem(finalScorEl);
+  //console.log(valueEl);
+  //valueEl.textContent = finalScorEl;
+  //console.log(valueEl);
   
 }
 
