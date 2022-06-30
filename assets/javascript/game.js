@@ -121,20 +121,31 @@ function endGame(){
   
 }
 
-submitbuttonEl.addEventListener("click" , highScore)
-function highScore(){
+//function renderLastUser(){
+  //var valueEl = localStorage.getItem("finalscore");
+  //value.textContent=valueEl;
+  
+//}
+
+submitbuttonEl.addEventListener("click" ,function(highScore){
+
   scorePanelEl.classList.add('hide');
   highScoreEl.classList.remove('hide');
-  localStorage.setItem("value",finalScorEl);
-  document.getElementById("value").innerHTML = localStorage.getItem("value");
+  console.log(finalScorEl);
+  var valueEl = localStorage.getItem("finalscoreEl");
+  
+  console.log(valueEl);
+  value.textContent=valueEl;
 
+});
+  
   //console.log(finalScorEl.value);
  // var valueEl = localStorage.getItem(finalScorEl);
   //console.log(valueEl);
   //valueEl.textContent = finalScorEl;
   //console.log(valueEl);
   
-}
+
 
 
 
